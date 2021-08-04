@@ -32,9 +32,11 @@
     cursor: pointer;
     transition: 450ms all;
     transform-origin: center left;
+    position: relative;
   }
   .carousel__item:hover ~ .carousel__item {
     transform: translate3d(100px, 0, 0);
+    
   }
   .carousel__container:hover .carousel__item {
     opacity: 0.3;
@@ -43,13 +45,73 @@
     transform: scale(1.5);
     opacity: 1;
   }
+
+  .carousel-item__img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+  }
+  .carousel-item__details {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    font-size: 10px;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    align-items: flex-end;
+  }
+  .carousel-item__icon {
+      height: 20px;
+      width: 20px;
+  }
+
+ .carousel-item__details:hover {
+    transform: translate(0,160px);
+    position: absolute;
+    transition: all 3s;
+    opacity: 1;
+ }
 </style>
 <body>
   <section class="carousel">
     <div class="carousel__container">
       <div class="carousel__item">
+          <img class="carousel-item__img" src="http://ae01.alicdn.com/kf/H1e0237c191a34cdebeee1ae575560d4cz.jpg" alt="anime">
+          <div class="carousel-item__details">
+              <div>
+                <img class="carousel-item__icon" src="https://img.icons8.com/fluency/48/000000/play.png" alt="play"/>
+                <img class="carousel-item__icon" src="https://img.icons8.com/office/16/000000/plus-math.png" alt="mas"/>
+              </div>
+              <p class="carousel-item__details--title">Titulo Descriptivo</p>
+              <p class="carousel-item__details--subtitle">2019 16+ 80 min</p>
+          </div>
       </div>
       <div class="carousel__item">
+        <img class="carousel-item__img" src="https://wallpaperaccess.com/full/703474.jpg" alt="">
+        <div class="carousel-item__details">
+            <div>
+              <img class="carousel-item__icon" src="https://img.icons8.com/fluency/48/000000/play.png" alt="play"/>
+              <img class="carousel-item__icon" src="https://img.icons8.com/office/16/000000/plus-math.png" alt="mas"/>
+            </div>
+            <p class="carousel-item__details--title">Titulo Descriptivo</p>
+            <p class="carousel-item__details--subtitle">2019 16+ 80 min</p>
+        </div>
+      </div>
+      <div class="carousel__item">
+        <img class="carousel-item__img" src="https://picfiles.alphacoders.com/385/thumb-385784.jpg" alt=""/>
+        <div class="carousel-item__details">
+            <div>
+              <img class="carousel-item__icon" src="https://img.icons8.com/fluency/48/000000/play.png" alt="play"/>
+              <img class="carousel-item__icon" src="https://img.icons8.com/office/16/000000/plus-math.png" alt="mas"/>
+            </div>
+            <p class="carousel-item__details--title">Titulo Descriptivo</p>
+            <p class="carousel-item__details--subtitle">2019 16+ 80 min</p>
+        </div>
       </div>
     </div>
   </section>
